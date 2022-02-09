@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html oncontextmenu="return false" ondragstart="return false">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	/*
+	구조선택자
+		2n : 짝수번째 객체, 2n+1 : 홀수번째 객체, 3n: 3의 배수의 번째 객체선택
+		: nth-child()
+	*/
+	#lst>li:nth-child(2n){
+		background:pink;
+	}
+	#lst>li:first-child{
+		color:orange;
+	}
+	#lst>li:last-child{
+		color:gray; font-size:1.2em;
+	}
+	body{margin:0px}
+	/*그림자설정*/
+	#lst>li{
+		font-size:1.2em; margin-bottom:30px; border:1px solid #bbb;
+	}
+	/*박스 또는 글자에 그림자표시*/
+	#lst>li{
+		/*			오른쪽	아래쪽	투명		색상*/
+		box-shadow: -10px 	5px 	5px 	lightgreen; /*그림자 방향을 바꾸고 싶으면 -사용하면 됨*/
+	}
+	#lst>li{
+		text-shadow:3px 3px 3px purple;
+	}
+</style>
+</head>
+<!-- 
+	html속성
+	oncontextmenu : 마우스 오른쪽 키 사용제어
+	onselectstart : 선택시작 불가능
+	ondragstart : 드래그 시작 불가능
+ -->
+<body onselectstart="return false" oncontextmenu="return false">
+<ul id="lst">
+	<li>맨드라미</li>
+	<li>장미</li>
+	<li>코스모스</li>
+	<li>민들레</li>
+	<li>해바라기</li>
+	<li>히야신스</li>
+	<li>튤립</li>
+	<li>수국</li>
+</ul>
+<style>
+	/*텍스트 스타일*/
+	/*
+		::first-letter -> 문단의 첫번째 문자에 스타일 적용
+		::first-line -> 첫 번째 줄에 적용하느 스타일
+		::selection -> 선택한 문자의 스타일 
+	*/
+	#txt::first-letter{
+		font-size:2em; background:pink; font-weight:bold; color:red;
+	}
+	#txt::first-line{
+		text-decoration:underline;
+	}
+	#txt::selection{
+		color:gray; background:#000;
+	}
+	#txt{
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ff5db1+0,d6974f+50,ef017c+100 */
+		background: #ff5db1; /* Old browsers */
+		background: -moz-linear-gradient(45deg,  #ff5db1 0%, #d6974f 50%, #ef017c 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(45deg,  #ff5db1 0%,#d6974f 50%,#ef017c 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(45deg,  #ff5db1 0%,#d6974f 50%,#ef017c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5db1', endColorstr='#ef017c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	
+	}
+</style>
+<div id="txt">
+코로나19 오미크론 변이 확산이 이어지는 가운데 정부가 현재의 모니터링 체계를 일본 재택요양처럼 고위험군 위주로 전환한다고 밝혔습니다. 무증상·경증 재택치료자는 모니터링을 없애는 대신 필요할 때 비대면 진료를 받는 식으로 관리합니다.
+</div>
+
+<style>
+	/*
+		구조선택자
+		: first-of-type : 처음객체
+		: last-of-type : 마지막객체
+		: nth-of-type(2n) : 2n짝수번째, 2n+1홀수번째
+	*/
+	#lst2>li:nth-of-type(2n){background:yellow;}
+	#lst2>li:nth-of-type(2n+1){background:rgb(255, 0, 255);}
+	#lst2>li:first-of-type{font-size:2em;}
+	#lst2>li:last-of-type{color:orange;}
+</style>
+
+<ul id="lst2">
+	<li>맨드라미</li>
+	<li>장미</li>
+	<li>코스모스</li>
+	<li>민들레</li>
+	<li>해바라기</li>
+	<li>히야신스</li>
+	<li>튤립</li>
+	<li>수국</li>
+	
+</ul>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>입력양식 만들기</h1>
+<pre>
+	클라이언트측 정보 서버에서 가져갈 수 있도록 환경을 설정한다.
+	- get방식: 정보가 보임
+	- post방식: 정보가 보이지 않음, form태그를 반드시 사용해야함
+	
+	name: 변수, value: 값
+	maxlength: 입력할 수 있는 문자의 최대 개수
+	readonly: 읽기만 가능, 값 입력 불가
+	disabled: 비활성화
+	placeholder: 안내글
+	required: 입력안내글
+	
+
+</pre>
+<a href="board.jsp?username=이정은&num=250&userid=lee">서버로 정보 보내기</a>
+<hr/>
+<!-- action : 폼이 submit이 발생하면 실행될 파일명
+	 method : 데이터 전송방식 get, post -->
+	 
+<form method="get" action="aaaa.jsp?tel=010-1234-5678">
+	아이디 : <input type="text" name="userid" value="test" placeholder="아이디를 입력하세요" 
+					maxlength="10" size="10" required/><br/>
+	이름 : <input type="text" name="username" value="이정은" disabled/><br/>
+	비밀번호 : <input type="password" name="userpwd"/><br/>
+	파일첨부 : <input type="file" name="filename"/><br/>
+	체크박스 : <input type="checkbox"  name="hobby" value="농구"/> 농구
+			<input type="checkbox"  name="hobby" value="배구"/> 배구
+			<input type="checkbox"  name="hobby" value="축구"/> 축구<br/>
+	라디오버튼 : <input type="radio" name="email" value="yes" checked/> 동의
+			  <input type="radio" name="email" value="no"/> 비동의<br/>
+	여러줄의 문자 입력 : <textarea name="memo" cols="50" rows="5">글을 입력하세요.</textarea><br/>
+	리스트박스 : 
+	<select name="language" size=3" multiple>
+		<option>자바</option>
+		<option>html</option>
+		<option>자바스크립트</option>
+		<option selected>css</option>
+		<option>jsp</option>
+    </select> <!-- size: 한번에 표시되는 목록 수, multiple: 다중선택 --><br/>
+	리스트 group : 
+	<select name="Lang">
+		<optgroup label="프론트엔드">
+			<option>자바스크립스</option>
+			<option>html</option>
+			<option>css</option>
+		</optgroup>
+		<optgroup label="백엔드">
+			<option value="java">자바</option>
+			<option>jsp</option>	
+		</optgroup>
+		
+	</select>		
+	<hr/>
+	date : <input type="date" name="date"/><br/>
+	date-time-local : <input type="datetime-local" name="date2"/><br/>
+	month : <input type="month" name="month"/><br/>
+	week : <input type="week" name="week"/><br/>
+	
+	color : <input type="color" name="color"/><br/>
+	number : <input type="number" name="num" min="10" max="20" step="2" value="14"/><br/>
+	range : <input type="range" name="ran" min="0" max="10" step="1" value="5"/> 
+	<hr/>
+	<!-- 전송버튼 : button, submit, image, button태그 -->
+	<input type="button" value="등록"/>
+	<input type="submit" value="등록"/>
+	<button>등록</button>
+	<input type="image" src="../img/h.png"/>
+	<input type="reset" value="다시쓰기"/>
+	
+	<input type="hidden" name="data" value="jungeun"/>
+</form>
+</body>
+</html>

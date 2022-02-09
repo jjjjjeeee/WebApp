@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+#movie {
+	text-align: center;
+}
+</style>
+<script>
+	var imgs = [ 'm01.png', 'm02.png', 'm03.png', 'm04.png', 'm05.png',
+			'm06.png', 'm07.png', 'm08.png', 'm09.png', 'm10.png', 'm11.png',
+			'm12.png', 'm13.png', 'm14.png', 'm15.png', 'm16.png', 'm17.png',
+			'm18.png', 'm19.png', 'm20.png'];
+	var idx = 0;
+
+	function changeImage() {
+		document.getElementById("poster").src = "postMovie2/" + imgs[idx++];
+
+		var timer = setTimeout('changeImage()', 1000);
+
+	}
+	function postStop(){
+		var post = document.querySelector("#poster");
+		clearTimeout(imgs);
+	}
+	function postPlay(){
+		
+	}
+	
+	
+	
+</script>
+</head>
+<body onload="changeImage()">
+	<div id="movie">
+		<img src="postMovie2/m01.png" id="poster" onmouseover="postStop()" onmouseover="postPlay()"/>
+	</div>
+</body>
+</html>
