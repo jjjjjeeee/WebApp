@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	#test{
+	
+	}
+</style>
+<!-- cdn방식으로 jquery적용 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+	var num = 100;
+	function jsView(){
+		document.getElementById("test1").innerHTML = "자바스크립트 함수에서 실행됨";
+	}
+	// jquery는 자바스크립트 이벤트 기반 라이브러리이다.
+	// 현재페이지가 로딩이 완료되면 ready이벤트가 발생하고 ready이벤트발생시 철할 함수를 생성해준다.
+	// document가 선택자이다.
+	// document에서 ready이벤트가 발생
+	$(document).ready(function(){
+		//jquery 영역이다.
+		// test2가 선택자이고 html함수에 ("<h1>jquery로 구현된 위치이다.</h1>")<==>매개변수를 호출
+		$("#test2").html("<h1>jquery로 구현된 위치이다.</h1>");
+	});
+	
+</script>
+</head>
+<body onload="jsView()">
+<div id="test1"></div>
+<div id="test2"></div>
+</body>
+</html>

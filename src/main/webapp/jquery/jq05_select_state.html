@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+	$(function(){
+		// 상태선택자
+		
+		// 속성값이 text인 객체를 선택하기
+		$(":text").css("width","300px").css("height","40px");
+		
+		// checked속성에 대한 선택자
+		$(":checked").prop("checked",false);
+		
+		$(":selected").prop("selected",false);
+		
+		//--------------
+		//컨텐츠 선택자
+		// contains() : 특정문자를 포함한 경우 선택한다.
+		$("p:contains('부동산')").css("background-color","pink");
+		
+		// has() : 특정 태그를 포함한 경우 선택한다.
+		$("p:has('b')").css("border","2px solid red");
+		
+		// not() : 특정선택자를 제외한 나머지를 선택한다.
+		$("p:not(:first)").css("color","green");
+		
+		// closest() : 조상선택자
+		$("i").closest("body").css("border","3px dotted green");
+		
+		// filter
+		$("p").filter('.c1').css("color","#fff").css("background",'#000');
+		
+		// contents() : 특정선택자의 하위가 다른 태그가 포함된 경우 선택자
+		$("p").contents().css("color","red");
+		
+	});
+</script>
+</head>
+<body>
+<div>
+	<p>함영진 직방 빅데이터랩장은 <b>"최근 몇 년간 주택 가격 상승에 따른 가격부담, 기준금리 인상 등으로 부동산 시장</b>이 관망세에 접어들면서 거래량도 감소하고 있지만 올해도 재테크, 투자 수단으로 부동산에 대한 관심은 계속될 전망"이라며 "큰 이슈와 변수로 꼽힌 기준금리 인상, 대출규제 등의 요인으로 무리한 투자보다는 부담 가능한 안정적인 투자 전략이 필요한 시점"이라고 밝혔다.</p>
+	<p class="c1">오늘(14일)은 될 수 있으면 대중교통을 이용해서 출근하시는 게 좋을 것 같습니다. <i>전국이 대체로 흐리고, 중부 지역에는 비나 눈이 오는 곳이 많겠는데요.</i> 특히 강원도에는 최고 20cm의 눈이 내릴 것으로 보입니다. 내일부터는 비나 눈이 그치고, 다시 강추위가 예상됩니다.</p>
+	<p class="c1">함영진 직방 빅데이터랩장은 "최근 몇 년간 주택 가격 상승에 따른 가격부담, 기준금리 인상 등으로 부동산 시장이 관망세에 접어들면서 거래량도 감소하고 있지만 올해도 재테크, 투자 수단으로 부동산에 대한 관심은 계속될 전망"이라며 "큰 이슈와 변수로 꼽힌 기준금리 인상, 대출규제 등의 요인으로 무리한 투자보다는 부담 가능한 안정적인 투자 전략이 필요한 시점"이라고 밝혔다.</p>
+	
+</div>
+	<div>
+		<form>
+			<label>이름</label>
+			<input type="text" name="username" id="username"/><br/>
+			<label>연락처</label>
+			<input type="text" name="tel" id="tel"><br/>
+			<label>사용자 동의 여부</label>
+			<input type="radio" name="accept" value="yes" checked>동의
+			<input type="radio" name="accept" value="no" checked>비동의<br/>
+			<label>자주가는 사이트</label>
+			<select name="title" id="site">
+				<option value="not">==직접선택==</option>
+				<option value="daum" selected>daum.net</option>
+				<option value="nate">nate.com</option>
+				<option value="naver">naver.com</option>
+			</select>
+		</form>
+	</div>
+</body>
+</html>

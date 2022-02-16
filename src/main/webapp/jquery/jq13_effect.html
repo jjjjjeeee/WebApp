@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+</style>
+<script>
+	$(function(){
+		$("#hide").click(function(){
+			//		사라지는 시간 : slow, fast, normal, 밀리초
+			$("#i").hide("slow");
+		});
+		$("#show").click(function(){
+			$("#i").show("slow");
+		});
+		$("#toggle").click(function(){
+			$("#i").toggle(3000);
+		});
+		
+		// fadeIn() : 점점진하게
+		// fadeout() : 점점흐리게
+		// fadeToggle() 
+		$("#fadeIn").click(function(){
+			//		사라지는 시간 : slow, fast, normal, 밀리초
+			$("#i").fadeIn("slow");
+		});
+		$("#fadeOut").click(function(){
+			$("#i").fadeOut("slow");
+		});
+		$("#fadeToggle").click(function(){
+			$("#i").fadeToggle(3000);
+		});
+		
+		// slideUp() : 슬라이드 모양으로 줄어듦
+		// slideDown()
+		// slideToggle()
+		$("#slideUp").click(function(){
+			//		사라지는 시간 : slow, fast, normal, 밀리초
+			$("#i").slideUp("slow");
+		});
+		$("#slideDown").click(function(){
+			$("#i").slideDown("slow");
+		});
+		$("#slideToggle").click(function(){
+			$("#i").slideToggle(3000);
+		});
+	});
+</script>
+</head>
+<body>
+	<div>
+		<button id="hide">숨기기(hidden)</button>
+		<button id="show">보여주기(show)</button>
+		<button id="toggle">toggle(hidden,show)</button>
+		<button id="fadeOut">숨기기(fadeOut)</button>
+		<button id="fadeIn">보여주기(fadeIn)</button>
+		<button id="fadeToggle">toggle(fadeIn, fadeOut)</button>
+		<button id="slideUp">숨기기(slideUp)</button>
+		<button id="slideDown">보여주기(slideDown)</button>
+		<button id="slideToggle">toggle(slideUp, slideDown)</button>
+		<hr />
+		<img src="../img/6.jfif" id="i"><br /> <img src="../img/7.jfif">
+	</div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+	.c1{border:5px solid red; width:100px; height:100px;}
+	.c2{border:5px dotted orange; width:100px; height:100px;}
+	.c3{border:5px dashed green; width:100px; height:100px;}
+	.c4{border:5px groove blue; width:100px; height:100px;}
+	
+</style>
+<script>
+	// function쓰는 것과 똑같은 방법
+	$(()=>{
+		// jquery에서 스타일시트 클래스를 추가하거나 삭제할 수 있다.
+		$("img").addClass("c1");
+		$("img").addClass("c2");
+		
+		$("img:even").addClass("c3");
+		
+		$("img:odd").removeClass("c2");
+		
+		// toggleClass() : 클래스가 있으면 지우고 없으면 추가한다.
+		$("img").toggleClass("c3");
+		
+		// hasclass() : 클래스가 있는지 확인해주는 함수
+		var r = $("img:first").hasClass("c3");
+		$("#result").val(r);
+		
+		// $("#result").val(); // 선택자의 value 속성값을 얻어오기
+		// document.getElementById("result") = $("#result")
+		// $("#result").val("이정은") // 선택자의 value속성값을 매개변수의 값으로 바꾼다.
+	});
+</script>
+</head>
+<body>
+<div>
+	<img src="../img/6.jfif"/>
+	<img src="../img/7.jfif"/>
+	<img src="../img/1.jfif"/>
+	<img src="../img/2.jfif"/>
+</div>
+<div>
+	<input type="text" id="result"/>
+</div>
+</body>
+</html>
