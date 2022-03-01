@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-sale=1" />
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+	integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+	crossorigin="anonymous">
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+	integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+	crossorigin="anonymous"></script>
+
+</head>
+<body>
+	<div class="container">
+		<h1>Accordion 예</h1>
+		<div id="accordion">
+			<div class="card">
+				<div class="card-header" data-target="#v1" data-toggle="collapse">기본으로
+					보이는 내용 : 더 뉴 렉스턴</div>
+				<div id="v1" class="collapse show" data-parent="#accordion">토글로
+					보이는 내용 : 더 뉴 렉스턴 스포츠&칸은 지난해 4월 부분변경 모델로 출시된 뒤 약 7개월 만인 올해 1월 편의기능과
+					주행안전기능을 강화한 연식변경 모델로 돌아왔다. 출시 2주 만에 누적 계약 3000대를 돌파하며 국내 픽업 시장에 활기를
+					불어넣은 차량으로 평가받는다.</div>
+			</div>
+			<div class="card">
+				<div class="card-header" data-target="#v2" data-toggle="collapse">기본으로
+					보이는 내용 : 마칸 T</div>
+				<div id="v2" class="collapse" data-parent="#accordion">토글로 보이는
+					내용 : 마칸 T는 기존 911, 718 모델에서만 사용되었던 ‘투어링’의 약자인 ‘T’ 명칭을 붙인 최초의 4도어
+					스포츠카로, 보다 세밀해진 셋팅, 모델 전용 첨단 장비, 그리고 효율적인 엔진 장착을 통해 T 모델만의 탁월한 주행
+					경험을 제공한다. 1968년식 포르쉐 911 T의 정신을 계승한 놀라운 다이내믹 셋업과 경량화된 2리터 터보 엔진,
+					견고한 디자인이 특징이며, 스포티한 주행을 위한 첨단 장비들이 기본 사양으로 장착된다. 마칸T는 마칸과 마칸 S 사이에
+					포지셔닝한다.</div>
+				<div class="card">
+					<div class="card-header" data-target="#v3" data-toggle="collapse">기본으로
+						보이는 내용 : 뚱이</div>
+					<div id="v3" class="collapse" data-parent="#accordion">
+						<img src="../img/사랑해요_뚱이.png" />
+					</div>
+				</div>
+			</div>
+
+
+			<h1>Collapse 예</h1>
+			<input type="button" value="클릭하세요" class="btn btn-secondary"
+				data-target="#view" data-toggle="collapse" />
+			<div id="view" class="collapse show">
+				<!-- show: id가 보여진 상태로 시작 -->
+				<img src='../img/3.jfif' />
+			</div>
+
+			<hr />
+			<input type="button" value="클릭하세요" class="btn btn-success"
+				data-target="#view1" data-toggle="collapse" />
+			<div id="view1" class="collapse show">
+				<!-- show: id가 보여진 상태로 시작 -->
+
+				더 뉴 렉스턴 스포츠&칸은 지난해 4월 부분변경 모델로 출시된 뒤 약 7개월 만인 올해 1월 편의기능과 주행안전기능을
+				강화한 연식변경 모델로 돌아왔다. 출시 2주 만에 누적 계약 3000대를 돌파하며 국내 픽업 시장에 활기를 불어넣은
+				차량으로 평가받는다.
+			</div>
+			
+		</div>
+	</div>
+</body>
+</html>

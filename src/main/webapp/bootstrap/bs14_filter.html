@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-sale=1"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+<script>
+	$(function(){
+		// search가 keyup이벤트가 발생하면 테이블에서 검색어가 포함된 줄만 보여주고 나머지는 숨긴다.
+		$("#search").keyup(function(){
+			//		  $("#search") => 이렇게 써도 됨
+			var value = $(this).val().toLowerCase();
+			
+			// 아이디 searchList내의 값을 filter
+			$("#searchList>tr").filter(function(){
+				// value기 tr에 있는지 확인
+				var idx = $(this).text().toLowerCase().indexOf(value); // 없으면 -1, 있으면 index번호
+				//				true: 그냥 줌, false: 숨김
+				$(this).toggle(idx>-1);
+			});
+		});
+	});
+</script>
+</head>
+<body>
+<div class="container">
+	<h2>Filter</h2>
+	<input type="text" id="search" placeholder="Search........" class="form-control"/>
+	<hr/>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>번호</th>
+				<th>이름</th>
+				<th>연락처</th>
+				<th>이메일</th>
+			</tr>
+		</thead>
+		<tbody id="searchList">
+			<tr>
+				<td>1</td>
+				<td>김김김</td>
+				<td>010-1111-1111</td>
+				<td>aaa@naver.com</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>최최최</td>
+				<td>010-2222-2222</td>
+				<td>bbb@nate.com</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>나나나</td>
+				<td>010-3333-3333</td>
+				<td>ccc@naver.com</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>오오오</td>
+				<td>010-4444-4444</td>
+				<td>ddd@daum.net</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>정정정</td>
+				<td>010-5555-5555</td>
+				<td>eee@naver.com</td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>윤윤윤</td>
+				<td>010-6666-6666</td>
+				<td>fff@daum.net</td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td>손손손</td>
+				<td>010-7777-7777</td>
+				<td>ggg@nate.com</td>
+			</tr>
+			<tr>
+				<td>8</td>
+				<td>박박박</td>
+				<td>010-8888-8888</td>
+				<td>hhh@naver.com</td>
+			</tr>
+			<tr>
+				<td>9</td>
+				<td>이이이</td>
+				<td>010-9999-9999</td>
+				<td>iii@daum.net</td>
+			</tr><tr>
+				<td>10</td>
+				<td>유유유</td>
+				<td>010-0000-0000</td>
+				<td>jjj@nate.com</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+</body>
+</html>

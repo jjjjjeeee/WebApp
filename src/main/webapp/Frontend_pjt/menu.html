@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-sale=1"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+<style>
+	ul,li{margin:0; padding:0; list-style-type:none;}
+	#container{
+		width:1000px;
+		margin:0 auto;
+	}
+	#boardList>li{
+		float:left;
+		height:40px;
+		line-height:40px;
+		border-bottom: 1px solid #ccc;
+		width:10%;
+	}
+	/*제목*/
+	#boardList>li:nth-child(6n+3){width:50%;}
+	
+	/*블럭의 범위를 넘는 내용을 줄임표시(...)으로 설정하는 스타일*/
+	.wordCut{
+		white-space: nowrap;/*줄바꿈하지 않게*/
+		overflow:hidden;/*범위를 벗어나면 숨김*/
+		text-overflow:ellipsis;/*문자가 범위를 넘으면 ...을 표시*/
+	}
+</style>
+<script>
+	$(function(){
+		$("#allChk").change(function(){
+			$("#boardList input[type=checkbox]").prop('checked',this.checked);
+		});
+	});
+</script>
+</head>
+<body>
+<div id="container">
+<h1>게시판 목록</h1>
+<ul id="boardList" class=>
+	<li><input type="checkbox" name="Chk" id="allChk" >전체선택</li>
+	<li>번호</li>
+	<li>제목</li>
+	<li>작성자</li>
+	<li>조회수</li>
+	<li>등록일</li>
+	
+	<li><input type="checkbox" name="Chk"></li>
+	<li>1</li>
+	<li class="wordCut">제목~~~~~</li>
+	<li>김이박</li>
+	<li>10000</li>
+	<li>02-16 12:00</li>
+	
+	<li><input type="checkbox" name="Chk"></li>
+	<li>1</li>
+	<li class="wordCut">제목~~~~~</li>
+	<li>김이박</li>
+	<li>10000</li>
+	<li>02-16 12:00</li>
+	
+	<li><input type="checkbox" name="Chk"></li>
+	<li>1</li>
+	<li class="wordCut">제목~~~~~</li>
+	<li>김이박</li>
+	<li>10000</li>
+	<li>02-16 12:00</li>
+	
+	<li><input type="checkbox" name="Chk"></li>
+	<li>1</li>
+	<li class="wordCut">제목~~~~~</li>
+	<li>김이박</li>
+	<li>10000</li>
+	<li>02-16 12:00</li>
+</ul>
+
+
+</div>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-sale=1"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<div class="container">
+	<div class="jumbotron">
+		<h1>jumbotron: 배경을 회색으로 하고 패딩을 확보하는 클래스</h1>
+	</div>
+	<p class="jumbotron">
+	수요일인 16일은 수도권을 중심으로 아침 기온이 영하 10도 아래로 떨어지고, 오후부터는 전라권과 제주도 산지 등에 눈이 내리겠다.
+
+기상청에 따르면 이날 오전 5시 현재 기온은 서울 -8.2도, 인천 -7.5도, 수원 -8.5도, 춘천 -9.5도, 강릉 -6.9도, 청주 -7.1도, 대전 -8.2도, 전주 -5.3도, 광주 -3.3도, 제주 1.9도, 대구 -4.8도, 부산 -4.1도, 울산 -4.6도, 창원 -4.9도 등이다.
+
+낮 최고 기온은 서울 -4도, 인천 -4도, 수원 -2도, 춘천 -1도, 강릉 1도, 청주 -2도, 대전 1도, 전주 -1도, 광주 0도, 대구 1도, 부산 4도, 제주 5도 등으로 예상된다.
+
+추위는 오는 18일 아침까지 이어지겠으며, 당분간 평년(최저기온 -8~2도, 최고기온 4~11도)보다 낮은 기온 분포를 보이겠다.
+	</p>
+	<section class="jumbotron">
+	수요일인 16일은 수도권을 중심으로 아침 기온이 영하 10도 아래로 떨어지고, 오후부터는 전라권과 제주도 산지 등에 눈이 내리겠다.
+
+기상청에 따르면 이날 오전 5시 현재 기온은 서울 -8.2도, 인천 -7.5도, 수원 -8.5도, 춘천 -9.5도, 강릉 -6.9도, 청주 -7.1도, 대전 -8.2도, 전주 -5.3도, 광주 -3.3도, 제주 1.9도, 대구 -4.8도, 부산 -4.1도, 울산 -4.6도, 창원 -4.9도 등이다.
+
+낮 최고 기온은 서울 -4도, 인천 -4도, 수원 -2도, 춘천 -1도, 강릉 1도, 청주 -2도, 대전 1도, 전주 -1도, 광주 0도, 대구 1도, 부산 4도, 제주 5도 등으로 예상된다.
+
+추위는 오는 18일 아침까지 이어지겠으며, 당분간 평년(최저기온 -8~2도, 최고기온 4~11도)보다 낮은 기온 분포를 보이겠다.
+	
+	</section>
+	<hr/>
+	<!-- 
+		.table : 표에 적용하는 클래스
+		.table table-striped : 줄단위 배경색
+		.table table-bordered : border가 있는 표
+		.table table-hover : 마우스 오버, 아웃시 배경색 변경
+		.table table-dark : 표의 배경색을 어두운 색으로 변환
+	 -->
+	<table class="table table-striped table-hover table-dark">
+		<thead>
+		<tr>
+			<td>번호</td>
+			<td>이름</td>
+			<td>번호</td>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td>1</td>
+			<td>이방원</td>
+			<td>010-1111-1111</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>장수왕</td>
+			<td>010-2222-2222</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>이순신</td>
+			<td>010-3333-3333</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>세종대왕</td>
+			<td>010-4444-4444</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>광개토대왕</td>
+			<td>010-5555-5555</td>
+		</tr>
+		</tbody>
+		<tfoot>
+		<tr>
+			<td colspan="3">문의사항은 02-1234-5678로 연락바랍니다.</td>
+		</tr>
+		</tfoot>
+	</table>
+	
+	
+	<hr/>
+	<!-- 
+		색상
+		* -> (*표시에 해당) table, btm, text
+		*-primary : blue
+		*-success : green
+		*-danger : red
+		*-info : blue
+		*-warning : yellow
+		*-active : gray
+		*-secondary : gray
+	 -->
+	<table class="table">
+		<thead>
+		<tr class="table-primary">
+			<td>번호</td>
+			<td>이름</td>
+			<td>번호</td>
+		</tr>
+		</thead>
+		<tbody>
+		<tr class="table-success">
+			<td>1</td>
+			<td>이방원</td>
+			<td>010-1111-1111</td>
+		</tr>
+		<tr class="table-danger">
+			<td>2</td>
+			<td>장수왕</td>
+			<td>010-2222-2222</td>
+		</tr>
+		<tr class="table-active">
+			<td>3</td>
+			<td>이순신</td>
+			<td>010-3333-3333</td>
+		</tr>
+		<tr class="table-info">
+			<td>4</td>
+			<td>세종대왕</td>
+			<td>010-4444-4444</td>
+		</tr>
+		<tr class="table-warning">
+			<td>5</td>
+			<td>광개토대왕</td>
+			<td>010-5555-5555</td>
+		</tr>
+		</tbody>
+		<tfoot>
+		<tr class="table-secondary">
+			<td colspan="3">문의사항은 02-1234-5678로 연락바랍니다.</td>
+		</tr>
+		</tfoot>
+	</table>
+</div>
+</body>
+</html>
